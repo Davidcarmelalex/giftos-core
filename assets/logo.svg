@@ -1,0 +1,59 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="120" x2="900" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05050A"/>
+      <stop offset="1" stop-color="#101225"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="210" y1="210" x2="820" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#FFD54F"/>
+    </linearGradient>
+    <linearGradient id="cube" x1="280" y1="260" x2="760" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.4" stop-color="#B8C4D6"/>
+      <stop offset="1" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="cubeGlow" x1="304" y1="292" x2="736" y2="744" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#7C3AED" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#FFD54F" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="100" y="100" width="824" height="824" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glow" x="120" y="120" width="784" height="784" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.1  0 0 1 0 0.2  0 0 0 1 0" result="colored"/>
+      <feMerge>
+        <feMergeNode in="colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="240" fill="url(#bg)"/>
+  <circle cx="512" cy="512" r="318" fill="none" stroke="url(#ring)" stroke-width="18" opacity="0.92" filter="url(#glow)"/>
+  <circle cx="512" cy="512" r="380" fill="none" stroke="url(#ring)" stroke-width="3" opacity="0.22" stroke-dasharray="2 18"/>
+
+  <g filter="url(#shadow)">
+    <path d="M512 230L720 350V606L512 726L304 606V350L512 230Z" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+    <path d="M512 230L720 350L512 470L304 350L512 230Z" fill="url(#cube)"/>
+    <path d="M304 350L512 470V726L304 606V350Z" fill="#1D2433"/>
+    <path d="M720 350L512 470V726L720 606V350Z" fill="#111827"/>
+    <path d="M512 470L720 350V606L512 726V470Z" fill="rgba(255,255,255,0.04)"/>
+
+    <path d="M414 395L512 339L610 395V516L512 572L414 516V395Z" fill="none" stroke="url(#cubeGlow)" stroke-width="20" stroke-linejoin="round" filter="url(#glow)"/>
+    <path d="M414 395L512 339L610 395V516L512 572L414 516V395Z" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M512 339V572" stroke="rgba(255,255,255,0.65)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M414 395L512 452L610 395" stroke="rgba(255,255,255,0.65)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M414 516L512 572L610 516" stroke="rgba(255,255,255,0.65)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.95">
+    <circle cx="764" cy="332" r="10" fill="#00E5FF"/>
+    <circle cx="780" cy="364" r="4" fill="#FFD54F"/>
+    <circle cx="266" cy="678" r="6" fill="#7C3AED"/>
+    <circle cx="286" cy="708" r="3" fill="#00E5FF"/>
+  </g>
+</svg>
