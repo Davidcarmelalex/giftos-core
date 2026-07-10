@@ -1,0 +1,1 @@
+"""GiftOS Core — The Operating System for Digital Gift Card Markets."""
